@@ -1,12 +1,16 @@
 
+
 ---
-- block:
-    - name: Install ansible.
-      pip:
-        name: ansible
-        version: "{{ ansible_install_version_pip | default(omit) }}"
-        state: present
-        
-  become: yes
-  tags:
-  - ansible_pip
+- name: Add ansible repository.
+  apt_repository: 
+    repo: 'ppa:ansible/ansible'
+
+- name: Update apt cache.
+  apt: 
+    update_cache: true 
+    cache_valid_time: 86400
+
+- name: Install Ansible.
+  apt:
+    name: ansible="{{ ansible_pip_version }}"
+    state: "present"
