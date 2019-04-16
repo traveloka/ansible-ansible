@@ -3,7 +3,7 @@
 ---
 - name: add ppa key
   apt_key:
-    id: 9ECBEC467F0CEB10
+    id: 7BB9C367
     keyserver: keyserver.ubuntu.com
     state: present
     
