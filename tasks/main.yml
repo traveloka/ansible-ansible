@@ -1,0 +1,12 @@
+
+---
+- block:
+    - name: Install ansible.
+      pip:
+        name: ansible
+        version: "{{ ansible_install_version_pip | default(omit) }}"
+        state: present
+        
+  become: yes
+  tags:
+  - ansible_pip

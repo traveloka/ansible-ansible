@@ -1,0 +1,4 @@
+---
+# defaults file for ansible_pip
+
+ansible_pip_version: "2.6.0"
