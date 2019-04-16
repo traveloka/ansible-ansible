@@ -1,3 +1,3 @@
-describe pip('ansible') do
+describe package('ansible') do
   it { should be_installed }
 end

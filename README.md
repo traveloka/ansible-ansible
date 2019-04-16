@@ -12,7 +12,7 @@ This role needs Pip to be installed first, please ensure pip is installed before
 ---
 - hosts: servers
   vars:
-   ansible_pip_version:  "2.6.0"
+   ansible_version:  "2.6.0"
   roles:
     role: ansible-ansible
 ```
