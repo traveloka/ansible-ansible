@@ -17,7 +17,7 @@
     
     - name: Install Ansible.
       apt:
-        name: ansible="{{ ansible_version }}"
+        name: ansible
         state: "present"
   become: yes
   become_method: sudo
